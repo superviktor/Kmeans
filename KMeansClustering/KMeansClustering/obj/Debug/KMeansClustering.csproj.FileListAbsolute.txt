@@ -1,0 +1,13 @@
+C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClustering\bin\Debug\KMeansClustering.exe.config
+C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClustering\bin\Debug\KMeansClustering.exe
+C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClustering\bin\Debug\KMeansClustering.pdb
+C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.csprojResolveAssemblyReference.cache
+C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClustering\obj\Debug\MainWindow.baml
+C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClustering\obj\Debug\MainWindow.g.cs
+C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClustering\obj\Debug\App.g.cs
+C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering_MarkupCompile.cache
+C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.g.resources
+C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.Properties.Resources.resources
+C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.csproj.GenerateResource.Cache
+C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.exe
+C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.pdb
