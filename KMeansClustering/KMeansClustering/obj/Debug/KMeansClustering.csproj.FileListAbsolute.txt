@@ -11,3 +11,19 @@ C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClus
 C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.csproj.GenerateResource.Cache
 C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.exe
 C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.pdb
+C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\bin\Debug\KMeansClustering.exe.config
+C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.exe
+C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.pdb
+C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.csprojResolveAssemblyReference.cache
+C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\obj\Debug\MainWindow.baml
+C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\obj\Debug\MainWindow.g.cs
+C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\obj\Debug\TestDBSCAN.g.cs
+C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\obj\Debug\App.g.cs
+C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering_MarkupCompile.cache
+C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering_MarkupCompile.lref
+C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\bin\Debug\KMeansClustering.exe
+C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\bin\Debug\KMeansClustering.pdb
+C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\obj\Debug\TestDBSCAN.baml
+C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.g.resources
+C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.Properties.Resources.resources
+C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.csproj.GenerateResource.Cache

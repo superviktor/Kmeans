@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClustering\obj\Debug\
+C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\obj\Debug\
 KMeansClustering
 none
 false
 DEBUG;TRACE
-C:\Users\HOUSE\Documents\Visual Studio 2013\Projects\KMeansClustering\KMeansClustering\App.xaml
-11151548125
+C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\App.xaml
+2224984039
 
-11-637043983
+14-946482354
 12-1401562060
-MainWindow.xaml;
+MainWindow.xaml;TestDBSCAN.xaml;
 
-False
+True
 
