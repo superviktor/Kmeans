@@ -14,15 +14,7 @@ namespace KMeansClustering
         public int numberOfClusters = 0;
         public void GetDefaultData()
         {
-            for (int i = 0; i < 33; i++)
-            {
-                for (int j = 0; j < 35; j++)
-                {
-                    defaultData.Add(new DataItem(i, j));
-                }              
-            }
-            
-            
+            defaultData = DataController.GenerateDataForKMeans();
             //will be reading from file and making defaultData.Add();
         }
 

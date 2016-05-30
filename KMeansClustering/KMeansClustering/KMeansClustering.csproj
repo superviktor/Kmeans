@@ -53,14 +53,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataController.cs" />
     <Compile Include="DBSCAN.cs" />
-    <Compile Include="Point.cs" />
-    <Compile Include="TestDBSCAN.xaml.cs">
-      <DependentUpon>TestDBSCAN.xaml</DependentUpon>
+    <Compile Include="Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Compile Include="Point.cs" />
+    <Compile Include="VisualizationController.cs" />
+    <Page Include="Main.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -68,14 +70,6 @@
     </Compile>
     <Compile Include="ClusteringManager.cs" />
     <Compile Include="DataItem.cs" />
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="TestDBSCAN.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
