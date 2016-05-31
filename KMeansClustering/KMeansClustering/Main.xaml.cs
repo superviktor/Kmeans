@@ -21,6 +21,7 @@ namespace KMeansClustering
     {
         List<Point> testPoints = new List<Point>();
         ClusteringManager c = new ClusteringManager();
+        Forel f = new Forel();
         public Main()
         {
             InitializeComponent();
@@ -39,8 +40,12 @@ namespace KMeansClustering
             //VisualizationController.DisplayPoints(defaultCanvas, testPoints, 15, 15, 15, 1, Color.FromRgb(0, 0, 0));
 
             //2 display  dbscan  default data    
-            DBSCAN.Execute();
-            VisualizationController.DisplayPoints(defaultCanvas, DBSCAN.points,10,10,10,1,Color.FromRgb(0,0,0));  
+            //DBSCAN.Execute();
+            //VisualizationController.DisplayPoints(defaultCanvas, DBSCAN.points,10,10,10,1,Color.FromRgb(0,0,0));  
+
+            //forel
+            f.GetData();
+            VisualizationController.DisplayPoints(defaultCanvas,f.points,15,15,25,1,Color.FromRgb(0,0,0));
         }
 
 
@@ -54,8 +59,11 @@ namespace KMeansClustering
 
 
             //2 dbscan 
-            VisualizationController.DisplayDBSCANResult(resultCanvas,DBSCAN.clusters,10,10,10,1);
+            //VisualizationController.DisplayDBSCANResult(resultCanvas,DBSCAN.clusters,10,10,10,1);
 
+            //3 forel 
+            f.Cluster();
+            VisualizationController.DisplayForel(f,resultCanvas,15,15,25,1);
         }
     }
 }

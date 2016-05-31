@@ -55,6 +55,7 @@
     </ApplicationDefinition>
     <Compile Include="DataController.cs" />
     <Compile Include="DBSCAN.cs" />
+    <Compile Include="Forel.cs" />
     <Compile Include="Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
