@@ -12,10 +12,9 @@ namespace KMeansClustering
         public List<DataItem> normalizedDataToCluster = new List<DataItem>();
         public List<DataItem> clusters = new List<DataItem>();
         public int numberOfClusters = 0;
-        public void GetDefaultData()
+        public void SetDataDefaultData(List<DataItem> data)
         {
-            defaultData = DataController.GenerateDataForKMeans();
-            //will be reading from file and making defaultData.Add();
+            defaultData = data;
         }
 
         //Gaussian Normalization 

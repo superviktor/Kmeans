@@ -13,34 +13,36 @@ namespace KMeansClustering
         public List<DataItem> points = new List<DataItem>();
         public List<List<DataItem>> result = new List<List<DataItem>>();
         public List<DataItem> centers = new List<DataItem>();
-        public double R = 1.65;
+        public double R = 10;
 
-        public void GetData()
+        public void SetData(List<DataItem> data)
         {
-            String input = File.ReadAllText("inputFile.txt");
-            int i = 0;
-            int j = 0;
-            double[,] resultArray = new double[17, 2];
-            foreach (string row in input.Split('\n'))
-            {
-                j = 0;
+            //String input = File.ReadAllText("inputFile.txt");
+            //int i = 0;
+            //int j = 0;
+            //double[,] resultArray = new double[17, 2];
+            //foreach (string row in input.Split('\n'))
+            //{
+            //    j = 0;
 
-                foreach (string col in row.Trim().Split(','))
-                {
-                    resultArray[i, j] = Double.Parse(col, CultureInfo.InvariantCulture);
-                    j++;
-                }
-                i++;
-            }
+            //    foreach (string col in row.Trim().Split(','))
+            //    {
+            //        resultArray[i, j] = Double.Parse(col, CultureInfo.InvariantCulture);
+            //        j++;
+            //    }
+            //    i++;
+            //}
 
-            for (int k = 0; k < resultArray.GetLength(0); k++)
-            {
-                for (int l = 0; l < resultArray.GetLength(1); l++)
-                {
-                    points.Add(new DataItem(resultArray[k, l], resultArray[k, l + 1]));
-                    break;
-                }
-            }
+            //for (int k = 0; k < resultArray.GetLength(0); k++)
+            //{
+            //    for (int l = 0; l < resultArray.GetLength(1); l++)
+            //    {
+            //        points.Add(new DataItem(resultArray[k, l], resultArray[k, l + 1]));
+            //        break;
+            //    }
+            //}
+
+            points = data;
         }
 
         public void Cluster()

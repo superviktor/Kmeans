@@ -19,51 +19,32 @@ namespace KMeansClustering
     /// </summary>
     public partial class Main : Window
     {
-        List<Point> testPoints = new List<Point>();
         ClusteringManager c = new ClusteringManager();
-        Forel f = new Forel();
-        public Main()
-        {
-            InitializeComponent();
-            for (int i = 0; i < 10; i++)
-            {
-                for (int j = 0; j < 10; j++)
-                {
-                    testPoints.Add(new Point(i, j));
-                }
-            }
-        }    
-
+        Forel f = new Forel();        
         private void genetateBtb_Click(object sender, RoutedEventArgs e)
         {
-            //1 kmeans display default data
-            //VisualizationController.DisplayPoints(defaultCanvas, testPoints, 15, 15, 15, 1, Color.FromRgb(0, 0, 0));
-
-            //2 display  dbscan  default data    
-            //DBSCAN.Execute();
-            //VisualizationController.DisplayPoints(defaultCanvas, DBSCAN.points,10,10,10,1,Color.FromRgb(0,0,0));  
-
-            //forel
-            f.GetData();
-            VisualizationController.DisplayPoints(defaultCanvas,f.points,15,15,25,1,Color.FromRgb(0,0,0));
+            VisualizationController.DisplayDefaultData(defaultCanvas,DataController.GenerateData1());
         }
 
 
         private void TestButton_Click_1(object sender, RoutedEventArgs e)
         {
             //1 display k means 
-            //c.numberOfClusters = 5;
-            //c.GetDefaultData();
+            //c.numberOfClusters = 2;
+            //c.SetDataDefaultData(DataController.GenerateData1());
             //c.Execute();
-            //VisualizationController.DisplayKMeansResult(c, resultCanvas, 15, 15, 15, 1);
+            //VisualizationController.DisplayResultData(resultCanvas, c.defaultData);
 
 
             //2 dbscan 
-            //VisualizationController.DisplayDBSCANResult(resultCanvas,DBSCAN.clusters,10,10,10,1);
+            DBSCAN.Init(DataController.GenerateData1());
+            DBSCAN.Execute();
+            VisualizationController.DisplayResultData(resultCanvas, DBSCAN.clusters);
 
             //3 forel 
-            f.Cluster();
-            VisualizationController.DisplayForel(f,resultCanvas,15,15,25,1);
+            //f.SetData(DataController.GenerateData1());
+            //f.Cluster();
+            //VisualizationController.DisplayResultData(resultCanvas,f.result,f.centers);
         }
     }
 }

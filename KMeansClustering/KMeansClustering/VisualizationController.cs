@@ -11,38 +11,24 @@ namespace KMeansClustering
 {
     static class VisualizationController
     {
-        public static void DisplayPoints(Canvas c, List<Point> points,int width, int height,int sizeKoef, int thickeness, Color defaultColor)
+
+        public static void DisplayDefaultData(Canvas c, List<DataItem> points)
         {
             foreach (var p in points)
             {
                 Ellipse elipse = new Ellipse();
-                elipse.Fill = new SolidColorBrush(defaultColor);
-                elipse.StrokeThickness = thickeness;
+                elipse.Fill = new SolidColorBrush(Color.FromRgb(0,0,0));
+                elipse.StrokeThickness = 1;
                 elipse.Stroke = Brushes.Black;
-                elipse.Width = width;
-                elipse.Height = height;
+                elipse.Width = 15;
+                elipse.Height = 15;
                 c.Children.Add(elipse);
-                Canvas.SetTop(elipse, p.Y * sizeKoef);
-                Canvas.SetLeft(elipse, p.X * sizeKoef);
-            }
-        }
-        public static void DisplayPoints(Canvas c, List<DataItem> points, int width, int height, int sizeKoef, int thickeness, Color defaultColor)
-        {
-            foreach (var p in points)
-            {
-                Ellipse elipse = new Ellipse();
-                elipse.Fill = new SolidColorBrush(defaultColor);
-                elipse.StrokeThickness = thickeness;
-                elipse.Stroke = Brushes.Black;
-                elipse.Width = width;
-                elipse.Height = height;
-                c.Children.Add(elipse);
-                Canvas.SetTop(elipse, p.Y * sizeKoef);
-                Canvas.SetLeft(elipse, p.X * sizeKoef);
+                Canvas.SetTop(elipse, p.Y * 15);
+                Canvas.SetLeft(elipse, p.X * 15);
             }
         }
 
-        public static void DisplayKMeansResult(ClusteringManager clustMan,Canvas canvas, int width, int height, int sizeKoef, int thickeness)
+        public static void DisplayResultData(Canvas canvas, List<DataItem> data)
         {
             Random rnd = new Random();
             List<Color> clrs = new List<Color>();           
@@ -50,19 +36,19 @@ namespace KMeansClustering
             {
                 clrs.Add(Color.FromRgb((byte) rnd.Next(0,255), (byte)rnd.Next(0, 255), (byte)rnd.Next(0, 255)));
             }          
-            var groupsToDisplay = clustMan.defaultData.GroupBy(s => s.Cluster).OrderBy(s => s.Key);
+            var groupsToDisplay = data.GroupBy(s => s.Cluster).OrderBy(s => s.Key);
             foreach (var group in groupsToDisplay)
             {
                 foreach (var item in group)
                 {
                     Ellipse elipse = new Ellipse();
                     elipse.Fill = new SolidColorBrush(clrs[group.Key]);
-                    elipse.StrokeThickness = thickeness;
+                    elipse.StrokeThickness = 1;
                     elipse.Stroke = Brushes.Black;
-                    elipse.Width = width;
-                    elipse.Height = height;
-                    Canvas.SetTop(elipse, item.Y * sizeKoef);
-                    Canvas.SetLeft(elipse, item.X * sizeKoef);
+                    elipse.Width = 15;
+                    elipse.Height = 15;
+                    Canvas.SetTop(elipse, item.Y * 15);
+                    Canvas.SetLeft(elipse, item.X * 15);
                     canvas.Children.Add(elipse);
                 }
             }
@@ -73,7 +59,7 @@ namespace KMeansClustering
             c.Children.Clear();
         }
 
-        public static void DisplayDBSCANResult(Canvas c, List<List<Point>> clusters, int width, int height, int sizeKoef, int thickeness)
+        public static void DisplayResultData(Canvas canvas, List<List<DataItem>> clusters)
         {
             Random rnd = new Random();
             List<Color> clrs = new List<Color>();
@@ -88,19 +74,19 @@ namespace KMeansClustering
                 {
                     Ellipse elipse = new Ellipse();
                     elipse.Fill = new SolidColorBrush(clrs[temp]);
-                    elipse.StrokeThickness = thickeness;
+                    elipse.StrokeThickness = 1;
                     elipse.Stroke = Brushes.Black;
-                    elipse.Width = width;
-                    elipse.Height = height;
-                    c.Children.Add(elipse);
-                    Canvas.SetTop(elipse, p.Y * sizeKoef);
-                    Canvas.SetLeft(elipse, p.X * sizeKoef);
+                    elipse.Width = 15;
+                    elipse.Height = 15;
+                    canvas.Children.Add(elipse);
+                    Canvas.SetTop(elipse, p.Y * 15);
+                    Canvas.SetLeft(elipse, p.X * 15);
                 }
                 temp++;
             }
         }
 
-        public static void DisplayForel(Forel f, Canvas resultCanvas,int width, int height, int sizeKoef, int thickeness)
+        public static void DisplayResultData(Canvas canvas, List<List<DataItem>> clusters, List<DataItem> centers)
         {
             Random rnd = new Random();
             List<Color> clrs = new List<Color>();
@@ -108,28 +94,27 @@ namespace KMeansClustering
             {
                 clrs.Add(Color.FromRgb((byte)rnd.Next(0, 255), (byte)rnd.Next(0, 255), (byte)rnd.Next(0, 255)));
             }
-            f.Cluster();
-            foreach (var cluster in f.result)
+            foreach (var cluster in clusters)
             {
-              
-                var color = new SolidColorBrush(clrs[f.result.IndexOf(cluster)]);
+
+                var color = new SolidColorBrush(clrs[clusters.IndexOf(cluster)]);
                 foreach (var p in cluster)
                 {
                     Ellipse elipse = new Ellipse();
                     elipse.Fill = color;
-                    elipse.StrokeThickness = thickeness;
+                    elipse.StrokeThickness = 1;
                     elipse.Stroke = Brushes.Black;
-                    elipse.Width = width;
-                    elipse.Height = height;
-                    Canvas.SetTop(elipse, p.Y * sizeKoef);
-                    Canvas.SetLeft(elipse, p.X * sizeKoef);
-                    resultCanvas.Children.Add(elipse);
+                    elipse.Width = 15;
+                    elipse.Height = 15;
+                    Canvas.SetTop(elipse, p.Y * 15);
+                    Canvas.SetLeft(elipse, p.X * 15);
+                    canvas.Children.Add(elipse);
                 }
             }
-        
-            foreach (var c in f.centers)
+
+            foreach (var c in centers)
             {
-                var color = new SolidColorBrush(clrs[f.centers.IndexOf(c)]);
+                var color = new SolidColorBrush(clrs[centers.IndexOf(c)]);
                 Ellipse elps = new Ellipse();
                 elps.Fill = color;
                 elps.Opacity = 0.4;
@@ -139,7 +124,7 @@ namespace KMeansClustering
                 Canvas.SetLeft(elps, c.X * 25);
                 elps.Width = 5;
                 elps.Height = 5;
-                resultCanvas.Children.Add(elps);
+                canvas.Children.Add(elps);
             }
         }
     }

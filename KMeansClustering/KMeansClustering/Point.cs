@@ -16,10 +16,7 @@ namespace KMeansClustering
             this.X = x;
             this.Y = y;
         }
-        public override string ToString()
-        {
-            return String.Format("({0}, {1})", X, Y);
-        }
+       
         public static int DistanceSquared(Point p1, Point p2)
         {
             int diffX = p2.X - p1.X;
