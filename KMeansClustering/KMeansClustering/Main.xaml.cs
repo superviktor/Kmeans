@@ -21,75 +21,83 @@ namespace KMeansClustering
     {
         ClusteringManager c = new ClusteringManager();
         Forel f = new Forel();
-        int num=1;
         List<DataItem> data = new List<DataItem>();
         private void genetateBtb_Click(object sender, RoutedEventArgs e)
         {
-            VisualizationController.Clear(defaultCanvas);
-            data.Clear();
-            switch (num)
-            {
-                case 1:
-                    data = DataController.GenerateData1();
-                    VisualizationController.DisplayDefaultData(defaultCanvas, data);
-                    break;
-                case 2:
-                    data = DataController.GenerateData2();
-                    VisualizationController.DisplayDefaultData(defaultCanvas, data);
-                    break;
-                case 3:
-                    data = data = DataController.GenerateData3();
-                    VisualizationController.DisplayDefaultData(defaultCanvas, data);
-                    break;
-                case 4:
-                    data = data = DataController.GenerateData4();
-                    VisualizationController.DisplayDefaultData(defaultCanvas, data);
-                    break;
-            }
-            num++;
-            if (num > 4)
-            {
-                num = 1;
-            }
+            Clear();
+            data = DataController.GenerateData1();
+            VisualizationController.DisplayDefaultData(defaultCanvas, data);
         }
 
-   
-
-        private void TestButton_Click_1(object sender, RoutedEventArgs e)
-        {
-            //1 display k means 
-            //c.numberOfClusters = 4;
-            //c.SetDataDefaultData(data);
-            //c.Execute();
-            //VisualizationController.DisplayResultData(resultCanvas, c.defaultData);
-
-
-            //2 dbscan 
-            DBSCAN.Init(data);
-            DBSCAN.Execute();
-            VisualizationController.DisplayResultData(resultCanvas, DBSCAN.clusters);
-
-            //3 forel 
-            //f.SetData(data);
-            //f.Cluster();
-            //VisualizationController.DisplayResultData(resultCanvas, f.result, f.centers);
-        }
 
         private void Create_Click(object sender, RoutedEventArgs e)
         {
-            
-        }
 
- 
+        }
 
         private void Kmeans_Click(object sender, RoutedEventArgs e)
         {
-           
+            VisualizationController.Clear(resultCanvas);
+            c.numberOfClusters = int.Parse(tbNumOfCls.Text);
+            c.SetDataDefaultData(data);
+            c.Execute();
+            VisualizationController.DisplayResultData(resultCanvas, c.defaultData);
+
         }
 
         private void Dbscan_Click(object sender, RoutedEventArgs e)
         {
-            
+            VisualizationController.Clear(resultCanvas);
+            DBSCAN.eps = int.Parse(tbEps.Text);
+            DBSCAN.minPts = int.Parse(tbMinPts.Text);
+            DBSCAN.Init(data);
+            DBSCAN.Execute();
+            VisualizationController.DisplayResultData(resultCanvas, DBSCAN.clusters);
+
+        }
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            VisualizationController.Clear(defaultCanvas);
+            data.Clear();
+            VisualizationController.Clear(resultCanvas);
+        }
+
+        private void genetateBtb_Click2(object sender, RoutedEventArgs e)
+        {
+            Clear();
+            data = DataController.GenerateData2();
+            VisualizationController.DisplayDefaultData(defaultCanvas, data);
+
+        }
+
+        private void Clear()
+        {
+            VisualizationController.Clear(defaultCanvas);
+            data.Clear();
+        }
+
+        private void genetateBtb_Click3(object sender, RoutedEventArgs e)
+        {
+            Clear();
+            data = DataController.GenerateData3();
+            VisualizationController.DisplayDefaultData(defaultCanvas, data);
+
+        }
+
+        private void genetateBtb_Click4(object sender, RoutedEventArgs e)
+        {
+            Clear();
+            data = data = DataController.GenerateData4();
+            VisualizationController.DisplayDefaultData(defaultCanvas, data);
+        }
+
+        private void Forel_Click(object sender, RoutedEventArgs e)
+        {
+            f.R = double.Parse(tbRadius.Text);
+            f.SetData(data);
+            f.Cluster();
+            VisualizationController.DisplayResultData(resultCanvas, f.result, f.centers);
         }
     }
 }

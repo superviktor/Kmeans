@@ -21,20 +21,42 @@
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" Grid.ColumnSpan="2" FontSize="20" HorizontalAlignment="Center">Data Loading</Label>
             <StackPanel Grid.Column="0" VerticalAlignment="Center">
-                <Button Width="100" Height="50" >Load from file</Button>
-                <Separator Height="10" Width="0"></Separator>
-                <Button Width="100" Height="50" Click="Create_Click">Create</Button>
+                <Button Width="100" Height="30" >Load from file</Button>
+                <Separator Height="1" Width="0"></Separator>
+                <Button Width="100" Height="30" Click="Create_Click">Create</Button>
+                <Separator Height="1" Width="0"></Separator>
+                <Button Width="100" Height="30" Click="Clear_Click">Clear</Button>
             </StackPanel>
-            <Button Width="100" Height="50" Grid.Column="1" Name="generateBtn" Click="genetateBtb_Click">Generate</Button>
+            <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="0,30,0,0">
+                <Button Width="100" Height="30" Grid.Column="1" Click="genetateBtb_Click">Generate 1</Button>
+                <Separator Height="1" Width="0"></Separator>
+                <Button Width="100" Height="30" Grid.Column="1"  Click="genetateBtb_Click2">Generate 2</Button>
+                <Separator Height="1" Width="0"></Separator>
+                <Button Width="100" Height="30" Grid.Column="1"  Click="genetateBtb_Click3">Generate 3</Button>
+                <Separator Height="1" Width="0"></Separator>
+                <Button Width="100" Height="30" Grid.Column="1"  Click="genetateBtb_Click4">Generate 4</Button>
+                <Separator Height="1" Width="0"></Separator>
+            </StackPanel>
             <Label Grid.Column="2" Grid.ColumnSpan="2" FontSize="20" HorizontalAlignment="Center">Clustering Algorithms</Label>
-            <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Margin="0,20,0,0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label>Number of clusters</Label>
+                <TextBox Name="tbNumOfCls"></TextBox>
                 <Button Name="kmeans" Click="Kmeans_Click">K-means</Button>
-                <Separator Height="20" Width="0"></Separator>
+                <Separator Height="4" Width="0"></Separator>
+                <StackPanel Orientation="Horizontal">
+                    <Label>Eps</Label>
+                    <TextBox Margin="18,0" Width="50" Name="tbEps"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label>MinPts</Label>
+                    <TextBox Width="50" Name="tbMinPts"></TextBox>
+                </StackPanel>
                 <Button Name="dbscan" Click="Dbscan_Click">DBSCAN</Button>
-                <Button Name="test" Click="TestButton_Click_1">test</Button>
             </StackPanel>
             <StackPanel Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <RadioButton Name="som" GroupName="algs">SOM</RadioButton>
+                <Label>Radius</Label>
+                <TextBox Name="tbRadius"></TextBox>
+                <Button Name="som" Click="Forel_Click">Forel</Button>
                 <Separator Height="20" Width="0"></Separator>
                 <RadioButton Name="cmenas" GroupName="algs">Cmeans</RadioButton>
             </StackPanel>

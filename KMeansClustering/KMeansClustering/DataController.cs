@@ -11,9 +11,16 @@ namespace KMeansClustering
         private static List<DataItem> data = new List<DataItem>();
         public static List<DataItem> GenerateData1()
         {
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 10; i++)
             {
-                for (int j = 0; j < 20; j++)
+                for (int j = 0; j < 10; j++)
+                {
+                    data.Add(new DataItem(i, j));
+                }
+            }
+            for (int i = 11; i < 21; i++)
+            {
+                for (int j = 11; j < 21; j++)
                 {
                     data.Add(new DataItem(i, j));
                 }
