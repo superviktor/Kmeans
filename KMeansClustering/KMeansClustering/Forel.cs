@@ -13,7 +13,7 @@ namespace KMeansClustering
         public List<DataItem> points = new List<DataItem>();
         public List<List<DataItem>> result = new List<List<DataItem>>();
         public List<DataItem> centers = new List<DataItem>();
-        public double R = 10;
+        public double R = 1.49;
 
         public void SetData(List<DataItem> data)
         {

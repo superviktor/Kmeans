@@ -12,8 +12,8 @@ namespace KMeansClustering
     static class DBSCAN
     {
         public static List<DataItem> points = new List<DataItem>();
-        static double eps = 10;
-        static int minPts = 50;
+        static double eps = 5;
+        static int minPts = 15;
         public static List<List<DataItem>> clusters = new List<List<DataItem>>();
         public static void Init(List<DataItem> data)
         {

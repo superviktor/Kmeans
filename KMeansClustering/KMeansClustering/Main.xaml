@@ -23,14 +23,14 @@
             <StackPanel Grid.Column="0" VerticalAlignment="Center">
                 <Button Width="100" Height="50" >Load from file</Button>
                 <Separator Height="10" Width="0"></Separator>
-                <Button Width="100" Height="50" >Create</Button>
+                <Button Width="100" Height="50" Click="Create_Click">Create</Button>
             </StackPanel>
             <Button Width="100" Height="50" Grid.Column="1" Name="generateBtn" Click="genetateBtb_Click">Generate</Button>
             <Label Grid.Column="2" Grid.ColumnSpan="2" FontSize="20" HorizontalAlignment="Center">Clustering Algorithms</Label>
             <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <RadioButton Name="kmeans" GroupName="algs">K-means</RadioButton>
+                <Button Name="kmeans" Click="Kmeans_Click">K-means</Button>
                 <Separator Height="20" Width="0"></Separator>
-                <RadioButton Name="dbscan" GroupName="algs">DBSCAN</RadioButton>
+                <Button Name="dbscan" Click="Dbscan_Click">DBSCAN</Button>
                 <Button Name="test" Click="TestButton_Click_1">test</Button>
             </StackPanel>
             <StackPanel Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center">

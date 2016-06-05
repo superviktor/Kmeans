@@ -54,7 +54,7 @@ namespace KMeansClustering
             }
         }
 
-        static void Clear(Canvas c)
+        public static void Clear(Canvas c)
         {
             c.Children.Clear();
         }
