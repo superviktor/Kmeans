@@ -25,3 +25,17 @@ C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\obj\De
 C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.csproj.GenerateResource.Cache
 C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\obj\Debug\Main.g.cs
 C:\Users\Victor\Documents\GitHub\Kmeans\KMeansClustering\KMeansClustering\obj\Debug\Main.baml
+D:\Clustering\KMeansClustering\KMeansClustering\bin\Debug\KMeansClustering.exe.config
+D:\Clustering\KMeansClustering\KMeansClustering\bin\Debug\KMeansClustering.exe
+D:\Clustering\KMeansClustering\KMeansClustering\bin\Debug\KMeansClustering.pdb
+D:\Clustering\KMeansClustering\KMeansClustering\obj\Debug\Main.g.cs
+D:\Clustering\KMeansClustering\KMeansClustering\obj\Debug\App.g.cs
+D:\Clustering\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering_MarkupCompile.cache
+D:\Clustering\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering_MarkupCompile.lref
+D:\Clustering\KMeansClustering\KMeansClustering\obj\Debug\Main.baml
+D:\Clustering\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.g.resources
+D:\Clustering\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.Properties.Resources.resources
+D:\Clustering\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.csproj.GenerateResource.Cache
+D:\Clustering\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.csproj.CoreCompileInputs.cache
+D:\Clustering\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.exe
+D:\Clustering\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.pdb

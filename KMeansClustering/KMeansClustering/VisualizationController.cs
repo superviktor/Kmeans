@@ -9,11 +9,14 @@ using System.Windows.Shapes;
 
 namespace KMeansClustering
 {
-    static class VisualizationController
+    public static class VisualizationController
     {
-
         public static void DisplayDefaultData(Canvas c, List<DataItem> points)
         {
+			if (c == null)
+			{
+				throw new Exception("Canvas is null");
+			}
             foreach (var p in points)
             {
                 Ellipse elipse = new Ellipse();

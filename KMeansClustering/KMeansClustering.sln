@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KMeansClustering", "KMeansClustering\KMeansClustering.csproj", "{D55B3376-3B5C-4A33-A037-71F6DA644FBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KMeansClustering.Tests", "KMeansClustering.Tests\KMeansClustering.Tests.csproj", "{18DCBC99-4BAD-45A2-AB25-731143B57775}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{D55B3376-3B5C-4A33-A037-71F6DA644FBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D55B3376-3B5C-4A33-A037-71F6DA644FBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D55B3376-3B5C-4A33-A037-71F6DA644FBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18DCBC99-4BAD-45A2-AB25-731143B57775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18DCBC99-4BAD-45A2-AB25-731143B57775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18DCBC99-4BAD-45A2-AB25-731143B57775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18DCBC99-4BAD-45A2-AB25-731143B57775}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90C14C18-7414-48F5-91F2-73030A08290A}
 	EndGlobalSection
 EndGlobal

@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace KMeansClustering
 {
-    static class DataController
+    public static class DataController
     {
         private static List<DataItem> data = new List<DataItem>();
+
         public static List<DataItem> GenerateData1()
         {
             for (int i = 0; i < 10; i++)
@@ -246,6 +248,7 @@ namespace KMeansClustering
             data.Add(new DataItem(50, 33));
             return data;
         }
+
         public static List<DataItem> GenerateData4()
         {
             data.Add(new DataItem(0.8, 2.5));
@@ -266,5 +269,47 @@ namespace KMeansClustering
             data.Add(new DataItem(4.5, 0.1));
             return data;
         }
-    }
+
+		public static bool IsFileExist(string path)
+		{
+			if (File.Exists(path))
+			{
+				return true;
+			}
+			return false;
+		}
+
+		public static bool IsFileEmpty(string path)
+		{
+			if (new FileInfo(path).Length == 0)
+			{
+				return true;
+			}
+			return false;
+		}
+
+		public static bool IsFileDataValid(string path)
+		{
+			try
+			{
+				//logic
+				return false;
+			}
+			catch (Exception e) 
+			{
+				return false;
+			}
+			
+		}
+
+		public static List<DataItem> GetDataFromFile(string path)
+		{
+			//logic
+			DataItem d = new DataItem(1, 1);
+			var list = new List<DataItem>();
+			list.Add(d);
+			return list;
+		}
+
+	}
 }

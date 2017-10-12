@@ -99,23 +99,17 @@ namespace KMeansClustering
             return false;
         }
 
-        public double EuclideanDistance(DataItem data, DataItem mean)
-        {
-            double difference = 0;
-            difference = Math.Pow(data.X - mean.X, 2);
-            difference += Math.Pow(data.Y - mean.Y, 2);
-            return Math.Sqrt(difference);
-        }
 
         public bool UpdateClusterMembership()
         {
-            bool changed = false;
+			EuclideanDistance ed = new EuclideanDistance();
+			bool changed = false;
             double[] distances = new double[numberOfClusters];
             for (int i = 0; i < normalizedDataToCluster.Count; ++i)
             {
                 for (int j = 0; j < numberOfClusters; ++j)
                 {
-                    distances[j] = EuclideanDistance(normalizedDataToCluster[i], clusters[j]);
+                    distances[j] = ed.GetDistance(normalizedDataToCluster[i], clusters[j]);
                     int newClusterIndex = MinIndex(distances);
                     if (newClusterIndex != normalizedDataToCluster[i].Cluster)
                     {
@@ -131,8 +125,12 @@ namespace KMeansClustering
             return true;
         }
 
-        private int MinIndex(double[] distances)
+        public int MinIndex(double[] distances)
         {
+			if (distances.Length<=0)
+			{
+				return -1;
+			}
             int minIndex = 0;
             double minDistance = distances[0];
             for (int i = 0; i < distances.Length; ++i)
