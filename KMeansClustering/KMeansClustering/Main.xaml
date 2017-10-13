@@ -57,7 +57,8 @@
                 <Label>Radius</Label>
                 <TextBox Name="tbRadius"></TextBox>
                 <Button Name="som" Click="Forel_Click">Forel</Button>
-                <Separator Height="20" Width="0"></Separator>
+				<Button Name="ParallelKMeneans" Click="ParallelKMeneans_Click" Background="Red">Parallel KMeans</Button>
+				<Separator Height="20" Width="0"></Separator>
                 <RadioButton Name="cmenas" GroupName="algs">Cmeans</RadioButton>
             </StackPanel>
             <StackPanel Grid.Column="2" Grid.ColumnSpan="2" Height="50" Width="200" VerticalAlignment="Bottom" Background="Gray" Visibility="Collapsed"></StackPanel>

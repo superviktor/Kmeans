@@ -1,4 +1,6 @@
-﻿using System;
+﻿using KMeansClustering.Algs;
+using KMeansClustering.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +21,9 @@ namespace KMeansClustering
     /// </summary>
     public partial class Main : Window
     {
+		MethodWrapper methodwrapper;
         ClusteringManager c = new ClusteringManager();
+		ParallelKMeans pkmeans = new ParallelKMeans();
         Forel f = new Forel();
         List<DataItem> data = new List<DataItem>();
         private void genetateBtb_Click(object sender, RoutedEventArgs e)
@@ -40,7 +44,8 @@ namespace KMeansClustering
             VisualizationController.Clear(resultCanvas);
             c.numberOfClusters = int.Parse(tbNumOfCls.Text);
             c.SetDataDefaultData(data);
-            c.Execute();
+			methodwrapper = new MethodWrapper(c.Execute);
+			PerformanceEstimateManager.GetTimeSpan(methodwrapper);
             VisualizationController.DisplayResultData(resultCanvas, c.defaultData);
 
         }
@@ -99,5 +104,15 @@ namespace KMeansClustering
             f.Cluster();
             VisualizationController.DisplayResultData(resultCanvas, f.result, f.centers);
         }
-    }
+
+		private void ParallelKMeneans_Click(object sender, RoutedEventArgs e)
+		{
+			VisualizationController.Clear(resultCanvas);
+			pkmeans.numberOfClusters = int.Parse(tbNumOfCls.Text);
+			pkmeans.SetDataDefaultData(data);
+			methodwrapper = new MethodWrapper(pkmeans.ExecuteParallel);
+			PerformanceEstimateManager.GetTimeSpan(methodwrapper);
+			VisualizationController.DisplayResultData(resultCanvas, pkmeans.defaultData);
+		}
+	}
 }

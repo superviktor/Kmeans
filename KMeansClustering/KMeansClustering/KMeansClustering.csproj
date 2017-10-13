@@ -53,18 +53,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DataController.cs" />
-    <Compile Include="DBSCAN.cs" />
-    <Compile Include="EuclideanDistance.cs" />
-    <Compile Include="Forel.cs" />
-    <Compile Include="IDistanceMeasure.cs" />
+    <Compile Include="Algs\ParallelKMeans.cs" />
+    <Compile Include="Data\DataController.cs" />
+    <Compile Include="Algs\DBSCAN.cs" />
+    <Compile Include="DistanceMeasure\EuclideanDistance.cs" />
+    <Compile Include="Algs\Forel.cs" />
+    <Compile Include="DistanceMeasure\IDistanceMeasure.cs" />
     <Compile Include="Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ManhattanDistance.cs" />
-    <Compile Include="Point.cs" />
-    <Compile Include="SquareEuclideanDistance.cs" />
-    <Compile Include="VisualizationController.cs" />
+    <Compile Include="DistanceMeasure\ManhattanDistance.cs" />
+    <Compile Include="Data\Point.cs" />
+    <Compile Include="DistanceMeasure\SquareEuclideanDistance.cs" />
+    <Compile Include="Utilities\PerformanceEstimateManager.cs" />
+    <Compile Include="View\VisualizationController.cs" />
     <Page Include="Main.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -73,8 +75,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ClusteringManager.cs" />
-    <Compile Include="DataItem.cs" />
+    <Compile Include="Algs\ClusteringManager.cs" />
+    <Compile Include="Data\DataItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

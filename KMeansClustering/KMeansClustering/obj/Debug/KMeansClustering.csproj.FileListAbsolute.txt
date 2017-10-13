@@ -39,3 +39,4 @@ D:\Clustering\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.cspro
 D:\Clustering\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.csproj.CoreCompileInputs.cache
 D:\Clustering\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.exe
 D:\Clustering\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.pdb
+D:\Clustering\KMeansClustering\KMeansClustering\obj\Debug\KMeansClustering.csprojResolveAssemblyReference.cache
