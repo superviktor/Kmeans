@@ -24,6 +24,7 @@ namespace KMeansClustering
 		MethodWrapper methodwrapper;
         ClusteringManager c = new ClusteringManager();
 		ParallelKMeans pkmeans = new ParallelKMeans();
+		ManualParallelKmeans manParKmeans = new ManualParallelKmeans();
         Forel f = new Forel();
         List<DataItem> data = new List<DataItem>();
         private void genetateBtb_Click(object sender, RoutedEventArgs e)
@@ -113,6 +114,16 @@ namespace KMeansClustering
 			methodwrapper = new MethodWrapper(pkmeans.ExecuteParallel);
 			PerformanceEstimateManager.GetTimeSpan(methodwrapper);
 			VisualizationController.DisplayResultData(resultCanvas, pkmeans.defaultData);
+		}
+
+		private void ManualParallelKMeneans_Click(object sender, RoutedEventArgs e)
+		{
+			VisualizationController.Clear(resultCanvas);
+			manParKmeans.numberOfClusters = int.Parse(tbNumOfCls.Text);
+			manParKmeans.SetDataDefaultData(data);
+			methodwrapper = new MethodWrapper(manParKmeans.Execute);
+			PerformanceEstimateManager.GetTimeSpan(methodwrapper);
+			VisualizationController.DisplayResultData(resultCanvas, manParKmeans.defaultData);
 		}
 	}
 }

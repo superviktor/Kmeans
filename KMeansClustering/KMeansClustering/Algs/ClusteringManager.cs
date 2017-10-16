@@ -51,11 +51,11 @@ namespace KMeansClustering
         public void InitializeCentroids()
         {
             Random rnd = new Random(numberOfClusters);
-            for (int i = 0; i < numberOfClusters; ++i)
-            {
-                normalizedDataToCluster[i].Cluster = defaultData[i].Cluster = i;
-            }
-            for (int i = numberOfClusters; i < normalizedDataToCluster.Count; i++)
+            //for (int i = 0; i < numberOfClusters; ++i)
+            //{
+            //    normalizedDataToCluster[i].Cluster = defaultData[i].Cluster = i;
+            //}
+            for (int i = 0; i < normalizedDataToCluster.Count; i++)
             {
                 normalizedDataToCluster[i].Cluster = defaultData[i].Cluster = rnd.Next(0, numberOfClusters);
             }
