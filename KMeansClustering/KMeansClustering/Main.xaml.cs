@@ -1,30 +1,20 @@
 ﻿using KMeansClustering.Algs;
 using KMeansClustering.Utilities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace KMeansClustering
 {
-    /// <summary>
-    /// Interaction logic for Main.xaml
-    /// </summary>
-    public partial class Main : Window
+	/// <summary>
+	/// Interaction logic for Main.xaml
+	/// </summary>
+	public partial class Main : Window
     {
 		MethodWrapper methodwrapper;
-        ClusteringManager c = new ClusteringManager();
+        SequentialKmeans sequentialKmeans = new SequentialKmeans();
 		ParallelKMeans pkmeans = new ParallelKMeans();
-		ManualParallelKmeans manParKmeans = new ManualParallelKmeans();
+		ManualParallelKmeans mpkm = new ManualParallelKmeans();
+
         Forel f = new Forel();
         List<DataItem> data = new List<DataItem>();
         private void genetateBtb_Click(object sender, RoutedEventArgs e)
@@ -34,7 +24,6 @@ namespace KMeansClustering
             VisualizationController.DisplayDefaultData(defaultCanvas, data);
         }
 
-
         private void Create_Click(object sender, RoutedEventArgs e)
         {
 
@@ -43,11 +32,11 @@ namespace KMeansClustering
         private void Kmeans_Click(object sender, RoutedEventArgs e)
         {
             VisualizationController.Clear(resultCanvas);
-            c.numberOfClusters = int.Parse(tbNumOfCls.Text);
-            c.SetDataDefaultData(data);
-			methodwrapper = new MethodWrapper(c.Execute);
+			sequentialKmeans.NumOfClusters = int.Parse(tbNumOfCls.Text);
+			sequentialKmeans.Data=data;
+			methodwrapper = new MethodWrapper(sequentialKmeans.Execute);
 			PerformanceEstimateManager.GetTimeSpan(methodwrapper);
-            VisualizationController.DisplayResultData(resultCanvas, c.defaultData);
+            VisualizationController.DisplayResultData(resultCanvas, sequentialKmeans.Data);
 
         }
 
@@ -109,21 +98,21 @@ namespace KMeansClustering
 		private void ParallelKMeneans_Click(object sender, RoutedEventArgs e)
 		{
 			VisualizationController.Clear(resultCanvas);
-			pkmeans.numberOfClusters = int.Parse(tbNumOfCls.Text);
-			pkmeans.SetDataDefaultData(data);
-			methodwrapper = new MethodWrapper(pkmeans.ExecuteParallel);
+			pkmeans.NumOfClusters = int.Parse(tbNumOfCls.Text);
+			pkmeans.Data = data;
+			methodwrapper = new MethodWrapper(pkmeans.Execute);
 			PerformanceEstimateManager.GetTimeSpan(methodwrapper);
-			VisualizationController.DisplayResultData(resultCanvas, pkmeans.defaultData);
+			VisualizationController.DisplayResultData(resultCanvas, pkmeans.Data);
 		}
 
 		private void ManualParallelKMeneans_Click(object sender, RoutedEventArgs e)
 		{
 			VisualizationController.Clear(resultCanvas);
-			manParKmeans.numberOfClusters = int.Parse(tbNumOfCls.Text);
-			manParKmeans.SetDataDefaultData(data);
-			methodwrapper = new MethodWrapper(manParKmeans.Execute);
+			mpkm.Data = data;
+			mpkm.NumOfClusters = int.Parse(tbNumOfCls.Text);
+			methodwrapper = new MethodWrapper(mpkm.Execute);
 			PerformanceEstimateManager.GetTimeSpan(methodwrapper);
-			VisualizationController.DisplayResultData(resultCanvas, manParKmeans.defaultData);
+			VisualizationController.DisplayResultData(resultCanvas, mpkm.Data);
 		}
 	}
 }
